@@ -13,5 +13,16 @@ query = """
 
 df = pd.read_sql_query(query, conn)
 
+df ['timestamp'] = pd.to_datetime(df['timestamp'])
+
 print(df.head())
 print(len(df))
+print(df.dtypes)
+print(df['timestamp'].min(), df['timestamp'].max())
+
+btc = df[df['coin_id'] == 'bitcoin'].copy()
+btc = btc.sort_values('timestamp')
+btc['time_diff'] = btc['timestamp'].diff()
+print(btc['time_diff'].describe())
+
+print(btc[btc['time_diff'] > pd.Timedelta(hours=1)][['timestamp', 'time_diff']])
