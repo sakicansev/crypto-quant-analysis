@@ -26,3 +26,6 @@ btc['time_diff'] = btc['timestamp'].diff()
 print(btc['time_diff'].describe())
 
 print(btc[btc['time_diff'] > pd.Timedelta(hours=1)][['timestamp', 'time_diff']])
+
+pivot = df.pivot_table(index='timestamp', columns='coin_id', values='price_usd')
+print(pivot.head())
