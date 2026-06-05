@@ -24,6 +24,16 @@ a standard data engineering pattern.
 - `models/correlation.py` — Pearson correlation matrix across all assets
 - `models/var.py` — Historical Value at Risk (daily, 95% confidence)
 
+## Charts
+
+![Bitcoin Rolling Volatility](bitcoin_volatility.png)
+
+![Crypto Correlation Matrix](correlation_matrix.png)
+
+![Sharpe Ratio by Coin](sharpe_ratio.png)
+
+![Rolling BTC/ETH Correlation](rolling_correlation.png)
+
 ## Tech Stack
 
 Python, pandas, numpy, matplotlib, seaborn, SQLite
