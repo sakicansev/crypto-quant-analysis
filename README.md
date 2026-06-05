@@ -23,6 +23,17 @@ a standard data engineering pattern.
 - `models/volatility.py` — log returns and rolling volatility
 - `models/correlation.py` — Pearson correlation matrix across all assets
 - `models/var.py` — Historical Value at Risk (daily, 95% confidence)
+- `models/sharpe.py` — Sharpe ratio (risk-adjusted return) for all coins
+- `models/rolling_correlation.py` — rolling BTC/ETH correlation over time
+
+## How to Run
+
+```bash
+git clone https://github.com/sakicansev/crypto-quant-analysis
+cd crypto-quant-analysis
+pip install pandas numpy matplotlib seaborn statsmodels
+PYTHONPATH=. python3 main.py
+```
 
 ## Charts
 
